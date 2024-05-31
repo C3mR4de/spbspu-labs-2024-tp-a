@@ -217,3 +217,28 @@ void novikov::invert(DictionariesStorage& storage, std::istream& in)
   std::transform(curr.begin(), curr.end(), std::inserter(temp, temp.begin()), invertor);
   storage[new_dictionary] = std::move(temp);
 }
+
+void novikov::displayHelp(std::ostream& out)
+{
+  out << "Usage: ./f0 --help\n";
+  out << "--help - show help information (this menu)\n";
+  out << "\n";
+  out << "Commands:\n";
+  out << "insert <dictionary> <key> <value> - insert new element in dictionary\n";
+  out << "search <dictionary> <key> <value> - search elements in dictionary\n";
+  out << "search-keys <dictionary> <key> - search elements in dictionary by key\n";
+  out << "search-values <dictionary> <value> - search elements in dictionary by key\n";
+  out << "remove <dictionary> <key> <value> - remove element\n";
+  out << "remove-keys <dictionary> <key> - remove elements by key\n";
+  out << "remove-values <dictionary> <value> - remove elements by value\n";
+  out << "create <newdictionary> - create new dictionary\n";
+  out << "open <dictionary> <file> - open dictionary from file\n";
+  out << "save <dictionary> <file> - save dictionary in file\n";
+  out << "close <dictionary> - close dictionary\n";
+  out << "print <dictionary> - print all elements of dictionary sorted by key\n";
+  out << "size <dictionary> - print count of keys in dictionary\n";
+  out << "merge <newdictionary> <N> <dictionary1> ... <dictionaryN> - merge N dictionaries\n";
+  out << "intersect <newdictionary> <N> <dictionary1> ... <dictionaryN> - find intersection of N dictionaries\n";
+  out << "filter <newdictionary> <dictionary1> <dictionary2> - filter one dictionary through another\n";
+  out << "invert <dictionary> <newdictionary> - swap keys and values in dictionary\n";
+}

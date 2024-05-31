@@ -17,7 +17,7 @@ int main(int argc, const char* argv[])
   {
     if (!std::strcmp(argv[1], "--help"))
     {
-      std::cout << "Eng-Rus dictionary help\n";
+      novikov::displayHelp(std::cout);
       return 0;
     }
     else

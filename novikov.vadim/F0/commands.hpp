@@ -66,6 +66,8 @@ namespace novikov
   void intersect(DictionariesStorage& storage, std::istream& in);
   void filter(DictionariesStorage& storage, std::istream& in);
   void invert(DictionariesStorage& storage, std::istream& in);
+
+  void displayHelp(std::ostream& out);
 }
 
 #endif
